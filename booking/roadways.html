@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadways Booking</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: url("road.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: scroll;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Header and Menu Section-->
+    <header class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a class="active" href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Booking Section-->
+    <main class="main-content container">
+
+        <div class="booking-content">
+            <h1>Roadways Express</h1>
+            <p>Book your bus tickets with confidence using our secure payment gateway. With multiple payment options available, including credit/debit cards and mobile wallets, convenience is just a click away.</p>
+        </div>
+
+        <div class="booking-form">
+            <h3>Book Road Journey</h3>
+            <div class="input-group">
+                <label for="">Departure Location</label>
+                <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
+            </div>
+            <div class="input-group">
+                <label for="">Arrival Location</label>
+                <input class="inp-style" type="text" name="" placeholder="New York, United States">
+            </div>
+            <div class="inputs">
+                <div class="input-group">
+                    <label for="">Departure Date</label>
+                    <input class="inp-style" type="date" name="">
+                </div>
+                <div class="input-group">
+                    <label for="">Return Date</label>
+                    <input class="inp-style" type="date" name="">
+                </div>
+            </div>
+            <div class="input-group f-class">
+                <div>
+                    <label for="">Luxury Bus (<span id="fClassTotal"> $200 </span>) </label>
+                    <input id="fClassCount" class="inp-style inp-width" value="1">
+                </div>
+                <div class="plus-minus-btn">
+                    <p> <span id="firstIncrease">+</span> <span id="firstDecrease">-</span> </p>
+                </div>
+            </div>
+            
+            <div class="input-group f-class">
+                <div>
+                    <label for="">Standard Bus (<span id="eClassTotal"> $100 </span>)</label>
+                    <input id="eClassCount" class="inp-style inp-width" value="1">
+                </div>
+                <div class="plus-minus-btn">
+                    <p> <span id="secondIncrease">+</span> <span id="secondDecrease">-</span> </p>
+                </div>
+            </div>
+            <div class="calculations">
+                <div class="amount">
+                    <div class="left">
+                        <p>Subtotal</p>
+                    </div>
+                    <div class="right">
+                        <p id="totalCost">$300</p>
+                    </div>
+                </div>
+
+                <div class="amount">
+                    <div class="left">
+                        <p>Charge 10% VAT</p>
+                    </div>
+                    <div class="right">
+                        <p id="taxAmount">$30</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="amount">
+                    <div class="left">
+                        <h4>Total</h4>
+                    </div>
+                    <div class="right">
+                        <p id="grandTotal">$330</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-style">Book Now</button>
+        </div>
+        <div class="thank-you-msg" style="display: none;">
+            <h2>Thank you for booking with us!</h2>
+            <p>Your booking has been confirmed.</p>
+        </div>
+    </main>
+    <script>
+        // JavaScript for showing thank you message
+        // JavaScript code for booking functionality
+        document.querySelector(".btn-style").addEventListener("click", function () {
+            // Hide the booking form
+            document.querySelector(".booking-form").style.display = "none";
+
+            // Display the thank you message
+            document.querySelector(".thank-you-msg").style.display = "block";
+        });
+    </script>
+    
+    <!--Thank You-->
+</body>
+
+</html>
